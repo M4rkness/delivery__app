@@ -1,0 +1,414 @@
+Указываем box sizing
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Убираем внутренние отступы */
+ul[class],
+ol[class] {
+    padding: 0;
+}
+
+/* Убираем внешние отступы */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Выставляем основные настройки по-умолчанию для body */
+body {
+    min-height: 100vh;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* Удаляем стандартную стилизацию для всех ul и il, у которых есть атрибут class*/
+ul[class],
+ol[class] {
+    list-style: none;
+}
+
+/* Элементы a, у которых нет класса, сбрасываем до дефолтных стилей */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Упрощаем работу с изображениями */
+img {
+    max-width: 100%;
+    display: block;
+}
+
+/* Указываем понятную периодичность в потоке данных у article*/
+article > * + * {
+    margin-top: 1em;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитай их не использовать */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+@font-face {
+    font-family: "Gilroy";
+    src: url(Fonts\\Gilroy\\Gilroy-ExtraBold.otf);
+    src: url(Fonts\\Gilroy\\Gilroy-Light.otf);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap');
+
+
+body {
+    position: relative;
+}
+
+
+:root {
+    --black-c: #313131;
+    --white-c: #ffffff;
+}
+
+.header {
+    background: url(/src/bg1.jpg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    margin: 0 260px;
+}
+
+.menu__img {
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+.menu__item {
+    text-decoration: none;
+    color: var(--white-c);
+    font-family: "Gilroy";
+    font-size: 20px;
+    transition: background 0.2s linear;
+    padding: 28.3px 10px;
+}
+
+.menu__item:hover {
+    background: var(--white-c);
+    color: var(--black-c);
+}
+
+
+.menu__margin {
+    margin: 0 20px;
+}
+
+.menu__link {
+    display: flex;
+    text-decoration: none;
+    color: var(--black-c);
+    font-family: "Gilroy";
+    font-weight: 700;
+    font-size: 18px;
+    align-items: center;
+}
+
+
+.logo__img {
+    width: 80px;
+    height: 80px;
+    background-color: #fff;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+
+.nav__link1 {
+    margin-left: 40px;
+}
+
+
+
+.nav__link2 {
+    text-decoration: none;
+    color: var(--white-c);
+    font-family: "Gilroy";
+    font-weight: 700;
+    font-size: 16px;
+    transition: background 0.2s linear;
+    padding: 28.3px 10px;
+}
+
+.nav__link2:hover {
+    background: var(--white-c);
+    color: var(--black-c);
+}
+
+
+.nav__auth {
+    display: flex;
+    align-items: center;
+}
+
+.nav__img {
+    width: 25px;
+    height: 25px;
+}
+
+.nav_link__auth {
+    text-decoration: none;
+    color: var(--white-c);
+    font-family: "Gilroy";
+    font-size: 20px;
+}
+
+.header_nav__block{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: #313131;
+    height: 80px;
+    box-shadow: 3px 6px 26px -6px rgba(0,0,0,0.67);
+}
+
+.header_nav__block {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+
+.nav a {
+    text-decoration: none;
+    align-items: center;
+}
+
+.nav a h3 {
+    color: var(--black-c);
+    font-family: "Gilroy";
+    font-size: 16px;
+
+}
+
+.header_main__block {
+    margin-top: 30px;
+}
+
+.block__switches {
+}
+.switch__prev {
+}
+.prev_switch {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    top: 300px;
+
+}
+
+
+.switch__prev span {
+    position: absolute;
+    top: 50%;
+    left: 257px;
+    display: inline-block;
+    transform: rotate(270deg);
+    align-items: center;
+    font-family: "Gilroy";
+}
+
+.next_switch {
+    position: absolute;
+    width: 30px;
+    height: 30px;
+}
+
+.content__block {
+    margin-left: 50px;
+}
+
+.content__title {
+    margin-top: 100px;
+    font-family: "Gilroy";
+    font-size: 65px;
+    color: var(--white-c);
+    line-height: 25px;
+}
+
+.content__subtitle {
+    font-size: 90px;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 900;
+    color: var(--black-c)
+}
+
+.content__title span {
+    display: block;
+}
+
+.content__suptitle {
+    margin-top: 55px;
+    color: var(--black-c);
+    font-family: "Gilroy";
+    font-size: 30px;
+    margin-bottom: 30px;
+}
+
+.content__btn {
+    text-decoration: none;
+    font-size: 24px;
+    color: var(--white-c);
+    font-family: "Gilroy";
+    font-weight: 700;
+    background-color: var(--black-c);
+    padding: 15px 20px;
+    border-radius: 200px;
+    transition: box-shadow 0.3s linear;
+}
+
+.content__btn:hover {
+    box-shadow: 0px 4px 4px 0px #00000040;
+}
+
+.header_main__block {
+    display: flex;
+}
+
+.img__block {
+    position: absolute;
+    top: 150px;
+    right: 150px;
+    width: 400px;
+    height: 400px;
+    margin-top: 20px;
+    opacity: 90%;
+    transform: rotate(50deg);
+    transition: transform 0.3s linear;
+    cursor: pointer;
+}
+
+.img__block:hover {
+    transform: rotate(30deg);
+    transform: scale(1.2);
+}
+
+.image__block {
+
+} 
+
+@media (max-width: 1440px) {
+    .img__block {
+        display: none;
+    }
+
+    .content__block {
+        margin: 0 auto;
+    }
+
+    .content__button, .content__suptitle, .content__subtitle, .content__title {
+        text-align: center;
+    }
+}
+
+@media (max-width: 1150px) {
+    .nav {
+        display: none;
+    }
+
+    .content__title {
+        font-size: 50px;
+        line-height: 10px;
+    }
+
+    .content__subtitle {
+        font-size: 70px;
+        text-align: left;
+    }
+
+    .content__suptitle {
+        font-size: 25px;
+        text-align: left;
+    }
+
+    .content__button {
+        text-align: left;
+    }
+
+    .content__btn {
+        font-size: 18px;
+        padding: 10px 15px;
+    }
+}
+
+@media (max-width: 990px) {
+    .content__title {
+        width: 35%;
+        line-height: 100%;
+        margin-top: 80px;
+    }
+
+    .content__subtitle {
+        line-height: 90%;
+    }
+
+    .content__suptitle {
+        margin: 40px 0 35px 0;
+    }
+
+    .content__btn {
+        font-weight: 400;
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 880px) {
+    .logo {
+        display: none;
+    }
+
+    .menu {
+        margin: 40px 0 0 0;
+    }
+
+    .content__subtitle {
+        font-size: 60px;
+    }
+    
+    .content__suptitle {
+        font-size: 20px; 
+        margin: 70px 0 30px 0;
+    }
+}
